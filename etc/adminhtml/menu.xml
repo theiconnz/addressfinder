@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Theiconnz_Addressfinder::menu" title="Address Finder" translate="title" module="Theiconnz_Addressfinder"
+             parent="Theiconnz_Base::menu" sortOrder="10" resource="Theiconnz_Addressfinder::menu" />
+
+        <add id="Theiconnz_Addressfinder::config" title="Address Finder Configuration" translate="title"
+             module="Theiconnz_Addressfinder" sortOrder="30" parent="Theiconnz_Addressfinder::menu"
+             resource="Theiconnz_Addressfinder::config" action="admin/system_config/edit/section/addressfinder" />
+    </menu>
+</config>

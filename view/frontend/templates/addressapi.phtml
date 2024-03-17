@@ -1,0 +1,6 @@
+<?php
+$helper = $block->getViewModel();
+?>
+<input type="hidden" id="ticon_addressfinderapikey" value='<?php echo $helper->getgoogleapikey(); ?>' />
+<input type="hidden" id="ticon_enabledisable" value='<?php echo $helper->isenable(); ?>' />
+<input type="hidden" id="ticon_restriction" value='<?php echo $helper->getRestrictions(); ?>' />

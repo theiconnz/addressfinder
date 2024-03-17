@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Theiconnz_Addressfinder::js/checkout.js"/>
+    </head>
+   <body>
+         <referenceContainer name="content">
+            <block ifconfig="addressfinder/general/enabled" class="Magento\Framework\View\Element\Template"
+                   name="Theiconnz.addressfinder.googleaddress"
+                   as="googleaddress"
+                   template="Theiconnz_Addressfinder::addressapi.phtml" >
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Theiconnz\Addressfinder\Helper\Data</argument>
+                </arguments>
+            </block>
+
+        </referenceContainer>
+    </body>
+</page>
