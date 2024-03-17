@@ -1,5 +1,5 @@
 {
-    "name": "Theiconnz/addressfinder",
+    "name": "theiconnz/addressfinder",
     "description": "Theiconnz google address finder",
     "require": {
         "php": ">=7.0.0",
