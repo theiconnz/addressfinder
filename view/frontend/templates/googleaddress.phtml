@@ -1,4 +1,6 @@
 <?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
 $helper = $block->getViewModel();
 ?>
 <script>
@@ -21,8 +23,7 @@ $helper = $block->getViewModel();
 <script>
     var autocomplete;
     function initAutocomplete() {
-
-        var clist='<?php echo $helper->getRestrictions();?>'.split(",");
+        var clist='<?=$escaper->escapeHtml($helper->getRestrictions())?>'.split(",");
         autocomplete = new google.maps.places.Autocomplete((document.querySelector("#street_1")),
             {
                 types: ['geocode'],
@@ -98,10 +99,10 @@ $helper = $block->getViewModel();
             });
         }
     }
-
 </script>
 <script
-    src="https://maps.googleapis.com/maps/api/js?key=<?php echo $helper->getgoogleapikey(); ?>&libraries=places&callback=initAutocomplete"
+    src="https://maps.googleapis.com/maps/api/js?key=<?=$escaper->escapeHtml($helper->getgoogleapikey())?>&
+    libraries=places&callback=initAutocomplete"
     async defer></script>
 
 

@@ -1,16 +1,18 @@
 <?php
 namespace Theiconnz\Addressfinder\Api;
 
-
-interface GoogleInterface {
-
+/**
+ * Google collection interface.
+ * @api
+ */
+interface GoogleInterface
+{
     /**
-     * get configuration
+     * Get configuration
+     *
      * @param string $auth_token
      * @return string
      * @param int $storeid
      */
-
-    public function getGoogleCollection($auth_token,$storeid);
-
+    public function getGoogleCollection($auth_token, $storeid);
 }

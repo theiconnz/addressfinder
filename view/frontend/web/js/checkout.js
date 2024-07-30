@@ -50,7 +50,9 @@ require([
                 if (!googleMapError) {
                     if (enabledisable == '1') {
                         var clist=window.ticonRestrictions.split(",");
-                        var street_id = uiRegistry.get('checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.street').elems()[0].uid;
+                        //var street_id = uiRegistry.get('checkout.steps.shipping-step.shippingAddress.shipping-address-fieldset.street').elems()[0].uid;
+                        var tmpstreet_id = document.querySelector("input[name='street[0]']");
+                        var street_id=$(tmpstreet_id).attr('id');
                         autocomplete = new google.maps.places.Autocomplete(document.getElementById(street_id),
                             {types: ['geocode'],componentRestrictions: {country: clist}}
                         );

@@ -1,6 +1,8 @@
 <?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
 $helper = $block->getViewModel();
 ?>
-<input type="hidden" id="ticon_addressfinderapikey" value='<?php echo $helper->getgoogleapikey(); ?>' />
-<input type="hidden" id="ticon_enabledisable" value='<?php echo $helper->isenable(); ?>' />
-<input type="hidden" id="ticon_restriction" value='<?php echo $helper->getRestrictions(); ?>' />
+<input type="hidden" id="ticon_addressfinderapikey" value='<?=$escaper->escapeXssInUrl($helper->getgoogleapikey())?>' />
+<input type="hidden" id="ticon_enabledisable" value='<?=$escaper->escapeXssInUrl($helper->isenable())?>' />
+<input type="hidden" id="ticon_restriction" value='<?=$escaper->escapeXssInUrl($helper->getRestrictions())?>' />
